@@ -87,18 +87,23 @@ if (screen.width > 768) {
                       try {
                       const { data } = await axios(`https://api.github.com/users/${document.getElementById('name').value}`)
                       try {
-                      const repo = await axios(`https://api.github.com/repos/${document.getElementById('name').value}/secktor-md`)
+                      const repo = await axios(`https://api.github.com/repos/${document.getElementById('name').value}/Anya_v2-MD`)
                       } catch (e) {
                       alert("Fork The Repository First.\nClick The 'OK' Button To Fork")
-                      return location.replace('https://github.com/SamPandey001/Secktor-Md/fork')
+                      return location.replace('https://github.com/PikaBotz/Anya_v2-MD/fork')
                       }
-                      location.replace('https://dashboard.heroku.com/new?button-url=https://github.com/' + document.getElementById('name').value + '/secktor-md&template=https://github.com/' + document.getElementById('name').value + '/secktor-md.git')
-                      } catch (error) {
+                      location.replace('https://dashboard.heroku.com/new?button-url=https://github.com/' + document.getElementById('name').value + '/Anya_v2-MD&template=https://github.com/' + document.getElementById('name').value + '/Anya_v2-MD.git')
+                      } catch (e) {
+                      alert("Fork The Repository First.\nClick The 'OK' Button To Fork")
+                      return location.replace('https://dashboard.heroku.com/new?button-url=https://github.com/' + document.getElementById('name').value + '/Anya_v2-MD&template=https://github.com/' + document.getElementById('name').value + '/Anya_v2-MD.git')
+                      }
+                      }
+                      
+                       catch (error) {
                           alert('Invalid Username')
                       }
                   }
-              }
-
+              
   </script>
 
 
